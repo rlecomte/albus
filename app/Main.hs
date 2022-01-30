@@ -1,10 +1,4 @@
-{-# LANGUAGE DeriveFunctor #-}
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FunctionalDependencies #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE UndecidableInstances #-}
 {-# LANGUAGE DeriveGeneric #-}
-{-# LANGUAGE ExistentialQuantification #-}
 
 module Main where
 
