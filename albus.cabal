@@ -25,18 +25,21 @@ source-repository head
 
 library
   exposed-modules:
-      Store
-      Workflow
+      Albus.Effects.Store
+      Albus.Workflow
   other-modules:
       Paths_albus
   hs-source-dirs:
       src
+  default-extensions:
+      BangPatterns ConstraintKinds DataKinds DeriveGeneric DerivingStrategies DerivingVia FlexibleContexts FlexibleInstances GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses OverloadedStrings OverloadedLabels RecordWildCards ScopedTypeVariables TypeApplications TypeFamilies TypeOperators
   build-depends:
       aeson
     , base >=4.7 && <5
     , comonad
     , containers
     , free
+    , mtl
     , streaming
   default-language: Haskell2010
 
@@ -46,6 +49,8 @@ executable albus-exe
       Paths_albus
   hs-source-dirs:
       app
+  default-extensions:
+      BangPatterns ConstraintKinds DataKinds DeriveGeneric DerivingStrategies DerivingVia FlexibleContexts FlexibleInstances GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses OverloadedStrings OverloadedLabels RecordWildCards ScopedTypeVariables TypeApplications TypeFamilies TypeOperators
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aeson
@@ -54,6 +59,7 @@ executable albus-exe
     , comonad
     , containers
     , free
+    , mtl
     , streaming
   default-language: Haskell2010
 
@@ -64,6 +70,8 @@ test-suite albus-test
       Paths_albus
   hs-source-dirs:
       test
+  default-extensions:
+      BangPatterns ConstraintKinds DataKinds DeriveGeneric DerivingStrategies DerivingVia FlexibleContexts FlexibleInstances GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase MultiParamTypeClasses OverloadedStrings OverloadedLabels RecordWildCards ScopedTypeVariables TypeApplications TypeFamilies TypeOperators
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aeson
@@ -72,5 +80,8 @@ test-suite albus-test
     , comonad
     , containers
     , free
+    , mtl
     , streaming
+    , tasty
+    , tasty-hunit
   default-language: Haskell2010

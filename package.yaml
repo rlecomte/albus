@@ -19,6 +19,27 @@ extra-source-files:
 # common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/rlecomte/albus#readme>
 
+default-extensions:  BangPatterns
+                     ConstraintKinds
+                     DataKinds
+                     DeriveGeneric
+                     DerivingStrategies
+                     DerivingVia
+                     FlexibleContexts
+                     FlexibleInstances
+                     GeneralizedNewtypeDeriving
+                     InstanceSigs
+                     KindSignatures
+                     LambdaCase
+                     MultiParamTypeClasses
+                     OverloadedStrings
+                     OverloadedLabels
+                     RecordWildCards
+                     ScopedTypeVariables
+                     TypeApplications
+                     TypeFamilies
+                     TypeOperators
+
 dependencies:
 - base >= 4.7 && < 5
 - comonad
@@ -26,6 +47,7 @@ dependencies:
 - streaming
 - containers
 - aeson
+- mtl
 
 library:
   source-dirs: src
@@ -51,3 +73,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - albus
+    - tasty
+    - tasty-hunit
